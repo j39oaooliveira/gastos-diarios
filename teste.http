@@ -1,0 +1,30 @@
+### Criar um Tipo de Gasto (Ex: Refeição)
+POST http://localhost:3000/tipos
+Content-Type: application/json
+
+{
+  "descricao": "Refeição"
+}
+
+###
+
+### Listar os Tipos de Gasto
+GET http://localhost:3000/tipos
+
+###
+
+### Cadastrar um Gasto associado ao Tipo de Gasto (ID 1)
+POST http://localhost:3000/gastos
+Content-Type: application/json
+
+{
+  "tipoGastoId": 1,
+  "data": "2023-11-20",
+  "valor": 45.50,
+  "formaPagamento": "cartao"
+}
+
+###
+
+### Listar todos os Gastos (Mostrará o Gasto + A Descrição do Tipo via Join)
+GET http://localhost:3000/gastos
